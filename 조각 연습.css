@@ -52,8 +52,8 @@ button:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
-  height: 80px;
+  width: 80%;
+  height: 100px;
 }
 
 .title {
@@ -118,7 +118,7 @@ button:focus {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
+  width: 80%;
   height: 400px;
   /* border: 1px solid #0066ff; */
 }
@@ -189,9 +189,9 @@ button:focus {
   flex-direction: column;
   justify-items: center;
   margin-top: 80px;
-  width: 90%;
+  width: 80%;
   height: 1200px;
-  padding: 20px;
+  border-top: 1px solid lightgray;
 }
 
 .informationDetail {
@@ -201,6 +201,10 @@ button:focus {
 }
 
 .infoImage {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 9;
   width: 20%;
   height: auto;
   background-position: center;
@@ -208,15 +212,21 @@ button:focus {
   background-size: 35%;
 }
 
-.infoTitle {
-  text-align: center;
+.infoButtonhidden-over768px {
+  display: none;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 80%;
+  border: none;
+  background-color: transparent;
 }
 
 .infoBody {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 80%;
+  width: 100%;
   height: auto;
   word-break: keep-all;
   text-align: left;
@@ -242,10 +252,110 @@ button:focus {
   order: 1;
 }
 
-/* .cssInfoBody p {
-  text-align: right;
-} */
-
 .JSImage {
   background-image: url(js-logo.png);
+}
+
+@media screen and (max-width: 768px) {
+  .itemSlide {
+    height: 250px;
+  }
+
+  .itemName {
+    font-size: 10px;
+  }
+
+  .information {
+    height: 600px;
+    position: relative;
+  }
+
+  .informationDetail {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: inherit;
+  }
+
+  .infoImage {
+    height: 23%;
+    background-size: 45%;
+  }
+
+  .infoButtonhidden-over768px {
+    display: inline-block;
+  }
+
+  .JSInfoBody::before {
+    position: relative;
+    float: left;
+    top: -15%;
+    left: 4%;
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid lightsteelblue;
+    content: "";
+    z-index: 999;
+  }
+
+  .JSInfoTitle {
+    display: block;
+  }
+
+  .JSInfoBody {
+    display: block;
+  }
+
+  .infoBody {
+    padding: 20px 30px;
+    background-color: lightsteelblue;
+  }
+
+  .infoBody p {
+    font-size: 13px;
+  }
+
+  /* .infoBodyhidden-under768px {
+    display: none;
+  } */
+
+  .htmlArticle {
+    align-items: flex-start;
+  }
+
+  .htmlInfoTitle {
+    text-align: start;
+  }
+
+  .cssArticle {
+    align-items: center;
+  }
+
+  .cssImage {
+    order: 1;
+  }
+
+  .cssInfoBody {
+    /* width: 100%; */
+    order: 2;
+  }
+
+  .cssInfoTitle {
+    text-align: center;
+  }
+
+  .JSArticle {
+    align-items: flex-end;
+  }
+
+  .JSInfoTitle {
+    text-align: end;
+  }
+
+  .JSInfoBody {
+    text-align: right;
+  }
 }

@@ -16,6 +16,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100vw;
   font-family: "ChosunGu", sans-serif;
 }
 
@@ -42,18 +43,32 @@ button:focus {
 }
 
 .partHeader {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
   width: 100%;
-  padding: 10px 20px;
 }
 
 .headerWrapper {
   display: flex;
+  /* justify-items: space-between; */
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+
+.simpleHeader {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
-  height: 100px;
+  position: relative;
+  z-index: 99;
+  width: 100%;
+  height: auto;
+  padding: 0 10%;
+}
+
+.menuButton-Under680px {
+  display: none;
 }
 
 .title {
@@ -62,14 +77,19 @@ button:focus {
 
 .navigator {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  height: 25px;
+  position: relative;
+  z-index: -99;
+  width: 100%;
+  height: 30px;
+  padding: 0 10%;
 }
 
 .navigatorMenu {
   display: flex;
-  width: 120px;
   justify-content: space-between;
+  width: 120px;
   padding: 0px;
 }
 
@@ -78,6 +98,7 @@ button:focus {
 }
 
 .searchForm {
+  display: flex;
   margin-left: 40px;
 }
 
@@ -111,7 +132,7 @@ button:focus {
   justify-items: center;
   align-items: center;
   width: 100%;
-  height: 1700px;
+  /* height: 1700px; */
 }
 
 .itemSlide {
@@ -119,7 +140,8 @@ button:focus {
   justify-content: space-around;
   align-items: center;
   width: 80%;
-  height: 400px;
+  height: 300px;
+  margin-bottom: 7%;
   /* border: 1px solid #0066ff; */
 }
 
@@ -131,8 +153,8 @@ button:focus {
   width: 100%;
   height: 100%;
   background-position: center 30%;
-  background-size: 30%;
   background-repeat: no-repeat;
+  background-size: 30%;
 }
 
 .item {
@@ -142,21 +164,21 @@ button:focus {
 
 .itemMiddleLine {
   display: flex;
-  margin: 0px;
   width: 80%;
   height: 2px;
-  border: none;
+  margin: 0px;
   background-color: white;
+  border: none;
   text-align: center;
 }
 
 .itemName {
-  width: 100%;
-  height: 30%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 30px;
+  width: 90%;
+  height: 30%;
+  padding: 25px;
 }
 
 .itemName h3,
@@ -184,53 +206,61 @@ button:focus {
   background-color: rgb(194, 194, 216);
 }
 
+/* .sectioningLine {
+  width: 80%;
+  margin: 0px;
+  border: 1px solid rgb(241, 241, 241);
+} */
+
 .information {
-  display: flex;
+  /* display: flex; */
+  display: block;
   flex-direction: column;
   justify-items: center;
-  margin-top: 80px;
   width: 80%;
-  height: 1200px;
-  border-top: 1px solid lightgray;
+  border-top: 1px solid rgb(241, 241, 241);
+  border-bottom: 1px solid rgb(241, 241, 241);
+  /* height: 1200px; */
 }
 
 .informationDetail {
   display: flex;
   width: 100%;
-  height: 33%;
+  margin-bottom: 15%;
+  /* height: 33%; */
+}
+
+.informationDetail:first-child {
+  margin-top: 15%;
 }
 
 .infoImage {
   display: flex;
   align-items: center;
-  position: relative;
-  z-index: 9;
-  width: 20%;
+  width: 25%;
   height: auto;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 35%;
 }
 
-.infoButtonhidden-over768px {
+.infoButton {
   display: none;
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  height: 80%;
-  border: none;
-  background-color: transparent;
 }
 
 .infoBody {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
+  width: 75%;
   height: auto;
   word-break: keep-all;
   text-align: left;
   line-height: 1.5em;
+}
+
+.infoTitle {
+  line-height: 2.5em;
 }
 
 .infoBody p {
@@ -256,82 +286,46 @@ button:focus {
   background-image: url(js-logo.png);
 }
 
-@media screen and (max-width: 768px) {
-  .itemSlide {
-    height: 250px;
+footer {
+  width: 100%;
+  margin: 50px 0px;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.footerComent {
+  font-size: 11px;
+  font-weight: 400;
+  color: rgb(160, 160, 160);
+}
+
+@media screen and (max-width: 1024px) {
+  .itemName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .itemName {
-    font-size: 10px;
+  .itemName strong {
+    display: none;
   }
 
   .information {
-    height: 600px;
-    position: relative;
+    display: block;
   }
 
   .informationDetail {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    height: inherit;
+    align-items: center;
   }
 
   .infoImage {
-    height: 23%;
-    background-size: 45%;
-  }
-
-  .infoButtonhidden-over768px {
-    display: inline-block;
-  }
-
-  .JSInfoBody::before {
-    position: relative;
-    float: left;
-    top: -15%;
-    left: 4%;
-    width: 0px;
-    height: 0px;
-    border-top: 10px solid transparent;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 20px solid lightsteelblue;
-    content: "";
-    z-index: 999;
-  }
-
-  .JSInfoTitle {
-    display: block;
-  }
-
-  .JSInfoBody {
-    display: block;
+    height: 120px;
   }
 
   .infoBody {
-    padding: 20px 30px;
-    background-color: lightsteelblue;
-  }
-
-  .infoBody p {
-    font-size: 13px;
-  }
-
-  /* .infoBodyhidden-under768px {
-    display: none;
-  } */
-
-  .htmlArticle {
-    align-items: flex-start;
-  }
-
-  .htmlInfoTitle {
-    text-align: start;
-  }
-
-  .cssArticle {
-    align-items: center;
+    text-align: center;
   }
 
   .cssImage {
@@ -339,23 +333,167 @@ button:focus {
   }
 
   .cssInfoBody {
-    /* width: 100%; */
     order: 2;
   }
+}
 
-  .cssInfoTitle {
+@media screen and (max-width: 680px) {
+  .partHeader {
+    align-items: center;
+    position: relative;
+    padding: 0px;
+  }
+
+  .headerWrapper {
+    height: 60px;
+    width: 100%;
+  }
+
+  .title {
+    text-indent: 10px;
+    font-size: 13px;
+  }
+
+  .navigator {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -410px;
+    left: 0%;
+    z-index: 0;
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    box-shadow: 0 1px 15px rgba(27, 31, 35, 0.15);
+  }
+
+  .navigator li form {
+    transform: translateY(102.5%);
+    transform-origin: top;
+    transition: all 0.3s;
+  }
+
+  .navigatorMenu {
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    top: 90px;
+    width: auto;
+    height: 80px;
+  }
+
+  .searchForm {
+    position: relative;
+    top: 100px;
+    margin: 0px;
+  }
+
+  .searchInput::placeholder {
     text-align: center;
   }
 
-  .JSArticle {
-    align-items: flex-end;
+  .menuButton-Under680px {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    background-image: url("ellipsis-v-solid.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20%;
+    border: none;
+    cursor: pointer;
   }
 
-  .JSInfoTitle {
-    text-align: end;
+  .itemSlide {
+    height: 230px;
   }
 
-  .JSInfoBody {
-    text-align: right;
+  .itemName {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .itemName h3 {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .itemName strong {
+    display: none;
+  }
+
+  .information {
+    display: block;
+  }
+
+  .informationDetail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .infoImage {
+    height: 120px;
+    background-size: 40%;
+  }
+
+  .infoBody {
+    text-align: center;
+  }
+
+  .cssImage {
+    order: 1;
+  }
+
+  .cssInfoBody {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .itemName h3 {
+    font-size: 13px;
+  }
+
+  .infoTitle {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .navigatorMenu {
+    font-size: 13px;
+  }
+
+  .searchInput {
+    width: 100px;
+  }
+
+  .searchInput::placeholder {
+    font-size: 13px;
+  }
+
+  .itemSlide {
+    height: 150px;
+  }
+
+  .itemName h3 {
+    font-size: 11px;
+  }
+
+  .infoTitle {
+    font-size: 13px;
+  }
+
+  .infoBody {
+    width: 90%;
+    line-height: 4em;
+    font-size: 5px;
+  }
+
+  .footerComent {
+    font-size: 5px;
   }
 }

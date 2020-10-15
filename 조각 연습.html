@@ -2,8 +2,8 @@
 <html lang="ko">
   <head>
     <meta charset="uft-8" />
-    <meta name="viewport" content="width=device-width, initial-scale:1.0" />
-    <link rel="stylesheet" href="조각 연습.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="조각 연습`.css" />
     <script
       src="https://kit.fontawesome.com/2884632ff3.js"
       crossorigin="anonymous"
@@ -12,8 +12,11 @@
   <body>
     <header class="partHeader">
       <div class="headerWrapper">
-        <h1 class="title">조각 연습</h1>
-        <div class="navigator">
+        <div class="simpleHeader">
+          <h1 class="title">조각 연습</h1>
+          <button type="button" class="menuButton-Under680px"></button>
+        </div>
+        <div class="navigator navigatorOpen">
           <ul class="navigatorMenu">
             <li>
               <a href="#">Home</a>
@@ -37,7 +40,7 @@
         <a href="#" class="item">
           <div class="itemBox loginItem item1">
             <hr aria-hidden="true" class="itemMiddleLine" />
-            <div class="itemName">
+            <div class="itemName loginItemName">
               <h3>login</h3>
               <strong>Input Id, Password</strong>
             </div>
@@ -66,20 +69,15 @@
             <hr aria-hidden="true" class="itemMiddleLine" />
             <div class="itemName instagramProfileItemName">
               <h3>Instagram Profile</h3>
-              <strong>Instagram Profile Section</strong>
+              <strong>User Profile Section</strong>
             </div>
           </div>
         </a>
       </section>
       <section class="information">
         <article class="informationDetail htmlArticle">
-          <div aria-hidden="true" class="infoImage htmlImage">
-            <button
-              type="button"
-              class="htmlButton infoButtonhidden-over768px"
-            ></button>
-          </div>
-          <div class="infoBody htmlInfoBody infoBodyhidden-under768px">
+          <div aria-hidden="true" class="htmlImage infoImage"></div>
+          <div class="infoBody htmlInfoBody">
             <h1 class="infoTitle htmlInfoTitle">HTML</h1>
             <p>
               하이퍼텍스트 마크업 언어(HyperText Markup Language, HTML)는 웹
@@ -99,13 +97,8 @@
           </div>
         </article>
         <article class="informationDetail cssArticle">
-          <div aria-hidden="true" class="infoImage cssImage">
-            <button
-              type="button"
-              class="cssButton infoButtonhidden-over768px"
-            ></button>
-          </div>
-          <div class="infoBody cssInfoBody infoBodyhidden-under768px">
+          <div aria-hidden="true" class="infoImage cssImage"></div>
+          <div class="infoBody cssInfoBody">
             <h1 class="infoTitle cssInfoTitle">CSS</h1>
             <p>
               종속형 시트 또는 캐스케이딩 스타일 시트(Cascading Style Sheets,
@@ -124,14 +117,9 @@
           </div>
         </article>
         <article class="informationDetail JSArticle">
-          <div aria-hidden="true" class="infoImage JSImage">
-            <button
-              type="button"
-              class="JSButton infoButtonhidden-over768px"
-            ></button>
-          </div>
-          <div class="infoBody JSInfoBody infoBodyhidden-under768px">
-            <h1 class="JSInfoTitle">JavaScript</h1>
+          <div aria-hidden="true" class="infoImage JSImage"></div>
+          <div class="infoBody JSInfoBody">
+            <h1 class="JSInfoTitle infoTitle">JavaScript</h1>
             <p>
               JavaScript는 일급 함수를 사용하는 객체 지향 인터프리터 언어이며
               웹페이지의 스크립트 언어이다. 하지만 브라우저가 아닌 환경에서도
@@ -152,5 +140,13 @@
         </article>
       </section>
     </main>
+    <footer>
+      <strong class="footerComent">
+        <a href="tel:+82.01.1234.5678">☎️ 010-1234-5678</a
+        ><a href="mailto:S2oonae@gmail.com"> 📧 S2oonae@gmail.com</a><br />
+        🏠 [13636] 경기 성남시 분당구 탄천상로151번길 20 <br />
+        copyright © Soon all rights reserved / published by plain design<br />
+      </strong>
+    </footer>
   </body>
 </html>
